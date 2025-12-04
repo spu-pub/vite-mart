@@ -52,7 +52,11 @@ function App() {
         </ul>
       </main>
       {activeTrailer && (
-        <div className="modal-overlay" onClick={handleCloseTrailer}></div>
+        <div className="modal-overlay" onClick={handleCloseTrailer}>
+          <div className="modal-content" onClick={(event) => event.stopPropagation()}>
+            <button className="modal-close" onClick={handleCloseTrailer}>X</button>
+          </div>
+        </div>
       )}
     </div>
   );
