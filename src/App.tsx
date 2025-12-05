@@ -55,6 +55,11 @@ function App() {
         <div className="modal-overlay" onClick={handleCloseTrailer}>
           <div className="modal-content" onClick={(event) => event.stopPropagation()}>
             <button className="modal-close" onClick={handleCloseTrailer}>X</button>
+            <div className="video-wrapper">
+              <iframe src={`https://www.youtube.com/embed/${activeTrailer}?autoplay=1`}
+              allowFullScreen
+              allow="accelerometer: autoplay;"></iframe>
+            </div>
           </div>
         </div>
       )}
