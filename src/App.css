@@ -55,3 +55,25 @@ body {
     margin-bottom: 20px;
   }
 }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 14, 0.8);
+}
+
+.modal-content {
+  position: relative;
+  background: #0f111a;
+  padding: 1rem;
+  width: min(900px, 90vw);
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.55rem;
+  background: transparent;
+  color: #fff;
+  font-size: 1.5rem;
+}
