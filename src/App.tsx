@@ -12,6 +12,15 @@ function App() {
         "In the Year 2016, Resistance fighter Blair Williams embarks on a deadly mission to search for a threat that is weakening humanity's defense against the self-aware artificial",
       trailer: "-Czz-TcWCkA",
     },
+    {
+      id: 2,
+      name: "トロン：アレス",
+      image:
+        "https://www.themoviedb.org/t/p/w1280/dEq2TSfmCYlvc5Lu7uA8HZsXt50.jpg",
+      overview:
+        "高度に洗練されたプログラム”アレス”が、ある危険なミッションのために現実世界へと送りこまれる。いまデジタル世界と現実世界が交錯する…。",
+      trailer: "bU3AXo9rYBo",
+    },
   ];
 
   const [activeTrailer, setActiveTrailer] = useState<string | null>(null);
