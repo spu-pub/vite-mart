@@ -68,9 +68,34 @@ const App = () => {
                     className="cart-btn"
                     onClick={handleToggleCart}>
                         <i className="fas fa-shopping-cart"></i>
+                        <span className="cart-count">
+                            {cartCount}
+                        </span>
+                    </button>
+                </div>
+                <div className="search-container">
+                    <input type="text" className="search-input" />
+                    <button className="search-btn">
+                        <i className="fas fa-search"></i>
                     </button>
                 </div>
             </header>
+            {page === 'home' ? (
+                <>
+                    <section className="hero-banner">
+                        <div className="banner-content">
+                            <img src="" alt="" className="banner-image" />
+                            <div className="banner-overlay">
+                                <h2>Fresh Picks</h2>
+                            </div>
+                        </div>
+                    </section>
+                </>
+            ) : (
+                <section className="category-page">
+                    
+                </section>
+            )}
         </div>
     );
 };
