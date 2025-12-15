@@ -96,6 +96,29 @@ const App = () => {
                             </div>
                         </div>
                     </section>
+                    <section className="category-section">
+                        <div className="section-header">
+                            <h2>Shop by Category</h2>
+                        </div>
+                        <div className="category-grid">
+                            {categories.map((category) => (
+                                <div className="category-item" key={category.label}>
+                                    <div className="category-icon">
+                                        {category.icon}
+                                    </div>
+                                    <span>{category.label}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                    <section className="featured-section">
+                        <div className="section-header">
+                            <h2>Featured</h2>
+                        </div>
+                        <div className="product-scroll">
+                            
+                        </div>
+                    </section>
                 </>
             ) : (
                 <section className="category-page">
