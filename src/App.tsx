@@ -89,6 +89,12 @@ const App = () => {
                                 <h2>Fresh Picks</h2>
                             </div>
                         </div>
+                        <div className="bakery-banner">
+                            <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className="bakery-image" />
+                            <div className="bakery-overlay">
+                                <h3>Bakery</h3>
+                            </div>
+                        </div>
                     </section>
                 </>
             ) : (
