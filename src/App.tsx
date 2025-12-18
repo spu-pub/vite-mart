@@ -41,8 +41,18 @@ const featuredProducts: FeaturedProduct[] = [
         image: 'https://images.unsplash.com/photo-1543158181-e6f9f6712055?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         alt: 'Fresh strawberries',
         price: '$4.50',
-    }
+    },
 ];
+
+const offers: Offer[] = [
+    {
+        image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        alt: 'coke image',
+        badge: '5% Off',
+        title: 'coke',
+        className: '',
+    }
+]
 
 const navItems: NavItem[] = [
     {icon: 'fas fa-home', label: 'Home', active: true},
@@ -127,8 +137,33 @@ const App = () => {
                             {featuredProducts.map((product) => (
                                 <div className="product-card" key={product.alt}>
                                     <img src={product.image} alt={product.alt} className="product-image" />
+                                    <div className="product-info">
+                                        <div className="product-price">
+                                            {product.price}
+                                        </div>
+                                        <button 
+                                        className="add-to-cart-icon"
+                                        type="button"
+                                        onClick={() => handleAddToCart(product)}
+                                        >
+                                            <i className="fas fa-plus"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             ) )}
+                        </div>
+                    </section>
+                    <section className="offers-section">
+                        <div className="section-header">
+                            <h2>Special Offers</h2>
+                        </div>
+                        <div className="offers-grid">
+                            {offers.map((offer) => (
+                                <div className={`offer-card ${offer.className ?? ''}`.trim()}
+                                key={offer.alt}>
+                                    <img src={offer.image} alt={offer.alt} />
+                                </div>
+                            ))}
                         </div>
                     </section>
                 </>
