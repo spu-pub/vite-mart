@@ -36,6 +36,14 @@ const categories: Category[] = [
     {icon: '🍛', label: 'Curry'},
 ];
 
+const featuredProducts: FeaturedProduct[] = [
+    {
+        image: 'https://images.unsplash.com/photo-1543158181-e6f9f6712055?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        alt: 'Fresh strawberries',
+        price: '$4.50',
+    }
+];
+
 const navItems: NavItem[] = [
     {icon: 'fas fa-home', label: 'Home', active: true},
     {icon: 'fas fa-th-large', label: 'Categories'},
@@ -116,7 +124,11 @@ const App = () => {
                             <h2>Featured</h2>
                         </div>
                         <div className="product-scroll">
-                            
+                            {featuredProducts.map((product) => (
+                                <div className="product-card" key={product.alt}>
+                                    <img src={product.image} alt={product.alt} className="product-image" />
+                                </div>
+                            ) )}
                         </div>
                     </section>
                 </>
