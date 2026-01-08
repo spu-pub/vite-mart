@@ -203,7 +203,7 @@ const App = () => {
             </footer>
             <nav className="bottom-nav">
                 {navItems.map((item) => (
-                    <button className={`nav-item${(item.label === 'Home' && page==='home') || (item.label === 'Categories' && page==='categories') ? 'active':''}`}
+                    <button className={`nav-item${(item.label === 'Home' && page==='home') || (item.label === 'Categories' && page==='categories') ? ' active':''}`}
                     key={item.label}
                     onClick={() => {
                         if(item.label === 'Home') handleNavigate('home');
