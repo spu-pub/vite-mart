@@ -214,6 +214,22 @@ const App = () => {
                     </button>
                 ))}
             </nav>
+            {isCartOpen && (
+                <div className="cart-overlay"
+                role="dialog"
+                onClick={handleToggleCart}>
+                    <div className="cart-sheet"
+                    onClick={(event) => event.stopPropagation}>
+                        <div className="cart-header">
+                            <div>
+                                <div className="cart-title">
+                                    Cart
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
