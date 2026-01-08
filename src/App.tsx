@@ -169,9 +169,51 @@ const App = () => {
                 </>
             ) : (
                 <section className="category-page">
-                    
+                    <div className="section-header">
+                        <h2>All Categories</h2>
+                        <div className="category-page-count">
+                            {categories.length} options
+                        </div>
+                    </div>
+                    <div className="category-page-grid">
+                        {categories.map((category) => (
+                            <div className="category-page-card" key={category.label}>
+                                <div className="category-page-icon">
+                                    {category.icon}
+                                </div>
+                                <div className="category-page-label">
+                                    {category.label}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </section>
             )}
+            <footer className="footer-links">
+                <div className="footer-row">
+                    <a href="#">
+                        <i className="fas fa-info-circle"></i>
+                        About Us
+                    </a>
+                    <a href="#">
+                        <i className="fas fa-phone"></i>
+                        Contact
+                    </a>
+                </div>
+            </footer>
+            <nav className="bottom-nav">
+                {navItems.map((item) => (
+                    <button className={`nav-item${(item.label === 'Home' && page==='home') || (item.label === 'Categories' && page==='categories') ? 'active':''}`}
+                    key={item.label}
+                    onClick={() => {
+                        if(item.label === 'Home') handleNavigate('home');
+                        if(item.label === 'Categories') handleNavigate('categories');
+                    }}>
+                        <i className={item.icon}></i>
+                        <span>{item.label}</span>
+                    </button>
+                ))}
+            </nav>
         </div>
     );
 };
