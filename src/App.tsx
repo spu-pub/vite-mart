@@ -225,7 +225,30 @@ const App = () => {
                                 <div className="cart-title">
                                     Cart
                                 </div>
+                                <div className="cart-subtitle">
+                                    {cartCount} item{cartCount === 1 ? '' : 's'} 
+                                </div>
                             </div>
+                            <button className="close-cart-btn"
+                            type="button"
+                            onClick={handleToggleCart}>
+                                <i className="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div className="cart-body">
+                            {cartItems.length === 0 ? (
+                                <div className="cart-empty">
+                                    No items.
+                                </div>
+                            ) : (
+                                <ul className="cart-list">
+                                    {cartItems.map((item, index) => (
+                                        <li className="cart-item" key={`${item.alt}-${index}`}>
+                                            <img src={item.image} alt={item.alt} className="cart-item-image" />
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </div>
                     </div>
                 </div>
