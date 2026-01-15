@@ -42,6 +42,11 @@ const featuredProducts: FeaturedProduct[] = [
         alt: 'Fresh strawberries',
         price: '$4.50',
     },
+    {
+        image: 'https://images.unsplash.com/photo-1631452180539-96aca7d48617?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        alt: 'Curry',
+        price: '$6',
+    }
 ];
 
 const offers: Offer[] = [
@@ -245,6 +250,14 @@ const App = () => {
                                     {cartItems.map((item, index) => (
                                         <li className="cart-item" key={`${item.alt}-${index}`}>
                                             <img src={item.image} alt={item.alt} className="cart-item-image" />
+                                            <div className="cart-item-info">
+                                                <div className="cart-item-title">
+                                                    {item.alt}
+                                                </div>
+                                                <div className="cart-item-price">
+                                                    {item.price}
+                                                </div>
+                                            </div>
                                         </li>
                                     ))}
                                 </ul>
