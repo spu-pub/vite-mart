@@ -46,6 +46,11 @@ const featuredProducts: FeaturedProduct[] = [
         image: 'https://images.unsplash.com/photo-1631452180539-96aca7d48617?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         alt: 'Curry',
         price: '$6',
+    },
+    {
+        image: 'https://images.unsplash.com/photo-1542826438-bd32f43d626f?q=80&w=1292&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        alt: 'Cake',
+        price: '$3',
     }
 ];
 
